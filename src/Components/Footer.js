@@ -1,26 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Footer(){
+export default function Footer() {
   return (
     <footer className="footer">
       <div className="containerf">
         <div className="row">
-          <div id='footerabout' className="col-md-4">
-            <h4 className='FAtitle'>About Us</h4>
-            <p>This website is supposed to make 3d models for the known planets in our galaxy, Then try using AI and conditions given and published by NASA to estimate How much this planet would be habitable</p>
+          {/* About */}
+          <div id="footerabout" className="col-md-4">
+            <h4 className="FAtitle">About Us</h4>
+            <p>
+              CZMU is a platform that visualizes exoplanets in 3D and uses AI
+              with NASA’s datasets to estimate the potential habitability of
+              other worlds. Explore, learn, and imagine new horizons.
+            </p>
           </div>
+
+          {/* Quick Links */}
           <div className="col-md-4">
             <h4>Quick Links</h4>
-            <ul className='ulfooter'>
-              <Link className='lii' to='/'>Home</Link>
-              <Link className='lii' to='/dashboard'>DashBoard</Link>
+            <ul className="ulfooter">
+              <li><Link className="lii" to="/">Home</Link></li>
+              <li><Link className="lii" to="/dashboard">Dashboard</Link></li>
+              <li><Link className="lii" to="/storytelling">Storytelling</Link></li>
             </ul>
           </div>
         </div>
-        <p className="copyright">Copyright 2024 <span style={{color:'#70a8f0'}}>CZ</span> Team.</p>
+
+        {/* Copyright */}
+        <p className="copyright">
+          © {new Date().getFullYear()} <span style={{ color: "#58a6ff" }}>CZMU</span> Team. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
-};
+}
+
 
